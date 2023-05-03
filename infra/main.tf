@@ -12,7 +12,7 @@ resource "hcloud_ssh_key" "default" {
   public_key = file(var.ssh_default_public_key)
 }
 resource "hcloud_server" "grafana" {
-  name        = "grafana"
+  name        = "grafana-${var.environment}"
   image       = var.os_type
   server_type = var.server_type
   location    = var.location

@@ -1,6 +1,12 @@
-//variable "hcloud_token" {
-//  sensitive = true
-//}
+variable "environment" {
+  type        = string
+  description = "Target environment of the deployment"
+}
+variable "aws_region" {
+  type        = string
+  description = "AWS region of the deployment"
+  default     = "eu-central-1"
+}
 variable "ssh_default_public_key" {
   type        = string
   description = "public key location"
